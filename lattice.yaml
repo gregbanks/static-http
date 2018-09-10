@@ -1,0 +1,16 @@
+type: v1/system
+
+node_pools:
+  main:
+    instance_type: t2.large
+    num_instances: 1
+
+components:
+  www:
+    type: v1/reference
+
+    file: definition/www.yaml
+
+    parameters:
+      node_pool: /:main
+      num_instances: 1
