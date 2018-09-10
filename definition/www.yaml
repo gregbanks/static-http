@@ -18,5 +18,5 @@ ports:
   "8888":
     protocol: TCP
 
-node_pool: "${node_pool}"
-num_instances: "{num_instances}"
+node_pool: ${node_pool}
+num_instances: {num_instances}
