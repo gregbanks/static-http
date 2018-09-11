@@ -19,4 +19,4 @@ ports:
     protocol: TCP
 
 node_pool: ${node_pool}
-num_instances: {num_instances}
+num_instances: ${num_instances}
