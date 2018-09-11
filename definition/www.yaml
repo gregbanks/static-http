@@ -9,9 +9,9 @@ type: v1/service
 build:
   type: docker_build
   docker_file:
-    path: ../context
+    path: context
   build_context:
-    path: ../context
+    path: context
   environment: {}
   options: {}
 ports:
