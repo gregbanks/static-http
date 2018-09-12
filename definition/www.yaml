@@ -17,6 +17,8 @@ build:
 ports:
   "8888":
     protocol: TCP
+    external_access:
+      public: true
 
 node_pool: ${node_pool}
 num_instances: ${num_instances}
