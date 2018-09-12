@@ -7,10 +7,12 @@ node_pools:
 
 components:
   www:
-    type: v1/reference
+    type: v1/service
 
-    file: definition/www.yaml
-
-    parameters:
-      node_pool: /:main
-      num_instances: 1
+    build:
+      type: docker_build
+    ports:
+      "8888":
+        protocol: TCP
+        external_access:
+          public: true
