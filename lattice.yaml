@@ -16,3 +16,5 @@ components:
         protocol: TCP
         external_access:
           public: true
+    node_pool: /:main
+    num_instances: 1
