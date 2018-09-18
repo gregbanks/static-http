@@ -11,6 +11,10 @@ components:
 
     build:
       type: docker_build
+      docker_file:
+        path: context
+      context:
+        path: context
     ports:
       "8888":
         protocol: TCP
