@@ -12,7 +12,7 @@ components:
     build:
       type: docker_build
       docker_file:
-        path: context
+        path: docker
       build_context:
         path: context
     ports:
