@@ -13,7 +13,7 @@ components:
       type: docker_build
       docker_file:
         path: context
-      context:
+      build_context:
         path: context
     ports:
       "8888":
