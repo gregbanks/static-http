@@ -14,11 +14,12 @@ RUN \
 USER www:www
 
 COPY html /srv/html
+COPY html2 /srv/html2
 
-WORKDIR /srv/html
+WORKDIR /srv
 
 ENV PORT ${PORT}
 
 EXPOSE ${PORT}/tcp
 
-CMD python -m SimpleHTTPServer ${PORT}
+CMD cd ${HTMLDIR-html} && python -m SimpleHTTPServer ${PORT}
