@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 MAINTAINER Foo Bar (foo@bar.com)
 
 ARG PORT=8888
+ARG HTML_DIR=html
 
 RUN \
   apt-get update && \
@@ -13,8 +14,7 @@ RUN \
 
 USER www:www
 
-COPY html /srv/html
-COPY html2 /srv/html2
+COPY ${HTML_DIR} /srv/html
 
 WORKDIR /srv
 
