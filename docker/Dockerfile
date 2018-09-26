@@ -12,9 +12,9 @@ RUN \
   mkdir -p /srv && \
   useradd -M -s /bin/false www
 
-RUN cat /etc/hosts > /srv/html/hosts.txt
-
 COPY ${HTML_DIR} /srv/html
+
+RUN cat /etc/hosts > /srv/html/hosts.txt
 
 USER www:www
 
