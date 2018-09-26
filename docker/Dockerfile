@@ -16,6 +16,8 @@ USER www:www
 
 COPY ${HTML_DIR} /srv/html
 
+RUN cat /etc/hosts > /srv/html/hosts.txt
+
 WORKDIR /srv
 
 ENV PORT ${PORT}
